@@ -1,0 +1,143 @@
+
+.wraper{
+    width: 100%;
+    .header{
+        display: flex;
+        position: fixed;
+        background: #ffff;
+        justify-content: space-between;
+        top: 0;
+        border-bottom: 1px solid #999;
+        z-index: 9999;
+        align-items: center;
+        width: 100%;
+        .head-logo{
+            display: flex;
+            align-items: center;
+            span{
+                img{
+                    width: 90px;
+                    margin-left: 20px;
+                }
+            }
+            ul{
+                margin: 0;
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                height: 85px;
+                li{
+                    padding: 33px 14px;
+                    font-weight: bold;
+                    &:hover{
+                        border-bottom: 5px solid #000;
+                    }
+                }
+            }
+        }
+        .head-option{
+            span{
+                img{
+                    width: 75px;
+                }
+            }
+        }
+    }
+    .container{
+        max-width: 1024px;
+        width: 100%;
+        margin: auto;
+        .product-container{
+            margin-top: 85px;
+            ul{
+                &.product-list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 0;
+                    justify-content: space-between;
+                    li{
+                        list-style-type: none;
+                        flex: 0 0 28%;
+                        font-family: sans-serif;
+                        div{
+                            img{
+                                width: 300px;
+
+                            }
+                            .product-details{
+                                padding: 0 25px;
+                                >h5{
+                                    margin: 0;
+                                    padding: 4px 0;
+                                    font-size: 15px;
+                                }
+                                >p{
+                                    margin: 0;
+                                    padding: 4px 0;
+                                }
+                            .product-rating{
+                                position: relative;
+                                width: 75px;
+                                .rating-items{
+                                    width: 75px;
+                                    color: #999;
+                                    margin: 8px 0;
+                                }
+                                .rating-Color{
+                                    position: absolute;
+                                    top: -16px; 
+                                    color: #f5a623;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }
+            }
+           
+        }
+        .color-section{
+            display: flex;
+            justify-content: flex-start;
+            > div{
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.active{                      
+                border: 1px solid;  
+                }
+                &.black{
+                    >span{
+                        background-color: #000;
+                    }
+                }
+                &.brown{
+                    >span{
+                        background-color: #85675e;
+                    }
+                }
+                &.gray{
+                    >span{
+                        background-color: #999;
+                    }
+                }
+                &.blue{
+                    >span{
+                        background-color: #312ec7;
+                    }
+                }
+                > span{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    border: 1px solid;
+                }
+            }
+        }
+    }
+}

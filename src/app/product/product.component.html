@@ -1,0 +1,65 @@
+<div class="wraper">
+    <div class="header">
+        <div class="head-logo">
+            <span>
+                <img src="../assets/images/logo.png">
+            </span>
+            <ul>
+                <li>WOMEN</li>
+                <li>MEN</li>
+                <li>KIDS</li>
+                <li>ACCESSORIES</li>
+                <li>CLEARANCE</li>
+                <li>BRANDS</li>
+            </ul>
+        </div>
+        <div class="head-option">
+            <span>
+                <img src="../assets/images/account.gif">
+            </span>
+            <span>
+                <img src="../assets/images/store.gif">
+            </span>
+            <span>
+                <img src="../assets/images/search.gif">
+            </span>
+            <span>
+                <img src="../assets/images/bag.gif">
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product-container">
+            <ul class="product-list">
+                <li *ngFor="let data of productData; let i = index">
+                    <div>
+                        <img src="../assets/images/products/{{i+1}}.jpg">
+                        <div class="product-details">
+                        <h5>{{data.brand}}</h5>
+                        <p>{{data.name}}</p>
+                        <h5>${{data.price}}</h5>
+                        <div class="product-rating">
+                            <p class="rating-items">
+                                <span *ngFor="let item of ratingData;let ind = index">
+                                    <i class="fa fa-star"></i>
+                                </span>
+                            </p>
+                            <p class="rating-Color" *ngIf="data.rating > 0" [style.width]="getColor(data)">
+                                <span *ngFor="let item of ratingData;let ind = index">
+                                    <i class="fa fa-star"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="color-section">
+                            <div *ngFor="let item of data.colors" [ngClass]="{'black': item.id==100,'brown': item.id==200,'gray': item.id==300,
+                            'blue': item.id==400,'active': item.id == data.activeColor}">
+                               <span></span> 
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
